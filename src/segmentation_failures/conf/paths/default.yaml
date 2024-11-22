@@ -1,0 +1,21 @@
+# path to directory with testing data for all datasets
+data_root_dir: ${oc.env:TESTDATA_ROOT_DIR}
+
+# path to logging directory
+log_dir: ${oc.env:EXPERIMENT_ROOT_DIR}
+
+# path to output directory, created dynamically by hydra
+# path generation pattern is specified in `conf/hydra/default.yaml`
+# use it to store all files generated during the run, like ckpts and metrics
+output_dir: ${hydra:runtime.output_dir}
+# Below are subdirs of output_dir!!
+results_dir: ${paths.output_dir}/results
+analysis_dir: ${paths.output_dir}/analysis
+pixel_confid_dir: ${paths.output_dir}/confidence_maps
+predictions_dir: ${paths.output_dir}/predictions
+prediction_samples_dir: ${paths.output_dir}/prediction_samples
+checkpoint_dir: ${paths.output_dir}/checkpoints
+extras_dir: ${paths.output_dir}/extras
+
+# path to working directory
+work_dir: ${hydra:runtime.cwd}

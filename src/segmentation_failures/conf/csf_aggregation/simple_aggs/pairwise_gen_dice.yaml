@@ -1,0 +1,5 @@
+pairwise_gen_dice:
+  _target_: segmentation_failures.models.confidence_aggregation.get_aggregator
+  name: pairwise_dice
+  include_zero_label: false
+  gen_dice_weight: square

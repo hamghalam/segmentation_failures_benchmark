@@ -1,0 +1,6 @@
+defaults:
+  - simple_agg
+
+metric_targets:
+  - generalized_dice
+  - dice

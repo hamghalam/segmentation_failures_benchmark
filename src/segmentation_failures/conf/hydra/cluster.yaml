@@ -1,0 +1,8 @@
+defaults:
+  - local
+
+run:
+  dir: ${paths.log_dir}/${expt_group}/Dataset${dataset.dataset_id}/runs/${expt_name}/${hydra.job.name}/${oc.env:LSB_JOBID}
+sweep:
+  dir: ${paths.log_dir}/${expt_group}/Dataset${dataset.dataset_id}/multiruns/${expt_name}/${hydra.job.name}/${oc.env:LSB_JOBID}
+  subdir: ${hydra.job.num}

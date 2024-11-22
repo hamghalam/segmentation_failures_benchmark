@@ -1,0 +1,6 @@
+defaults:
+  - nnunet
+
+nnunet_config: 2d
+batch_size: 12
+patch_size: [512, 512]

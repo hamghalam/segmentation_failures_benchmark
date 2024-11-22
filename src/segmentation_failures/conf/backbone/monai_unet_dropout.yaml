@@ -1,0 +1,5 @@
+defaults:
+  - monai_unet
+
+hparams:
+  dropout: 0.3

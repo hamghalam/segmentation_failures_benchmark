@@ -1,0 +1,7 @@
+defaults:
+  - dynamic_unet
+
+hparams:
+  res_block: true
+  blocks_per_stage: 3
+checkpoint: null

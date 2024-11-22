@@ -1,0 +1,9 @@
+# @package _global_
+
+# run learning rate finder
+
+defaults:
+  - default.yaml
+
+trainer:
+  auto_lr_find: true

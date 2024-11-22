@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - vae_image_and_mask
+
+csf_image:
+  hparams:
+    _target_: segmentation_failures.models.image_confidence.vae_estimator.IterativeSurrogateVAEmodule
+    surrogate_lr: 1e-3
+    quality_metric: generalized_dice
+    convergence_thresh: 1e-2
+
+trainer:
+  # As I do some optimization at test-time, I can't use inference_mode (only no_grad, which I disable locally)
+  # I experienced issues with the requires_grad attribute not being inherited when using inference_mode
+  inference_mode: false

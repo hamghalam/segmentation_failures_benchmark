@@ -1,0 +1,5 @@
+defaults:
+  - nnunet
+
+batch_size: 2
+patch_size: [20, 320, 256]

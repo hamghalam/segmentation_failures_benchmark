@@ -1,0 +1,7 @@
+dataset_id: ???
+img_dim: ???
+img_channels: ???
+num_classes: ???
+num_fg_classes: ??? # TODO This is a workaround. Some other configs need this value
+overlapping_classes: ???
+id_domain: ???

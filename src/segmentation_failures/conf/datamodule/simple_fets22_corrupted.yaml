@@ -1,0 +1,12 @@
+_target_: segmentation_failures.data.datamodules.SimpleBraTS
+train_data_dir: ${oc.env:nnUNet_raw}/Dataset500_simple_fets_corruptions
+test_data_dir: ${paths.data_root_dir}/Dataset500_simple_fets_corruptions
+dataset_id: ${dataset.dataset_id}
+patch_size: null # not used
+spacing: null # not used
+batch_size: 32
+batch_size_inference: 32
+fold: 0
+num_workers: 4
+pin_memory: True
+cache_num: 1.0

@@ -1,0 +1,12 @@
+results_saver:
+  _target_: segmentation_failures.callbacks.results_writer.ExperimentDataWriter
+  output_dir: ${paths.results_dir}
+  prediction_dir: ${paths.predictions_dir}
+  num_classes: ${dataset.num_classes}
+  region_based_eval: ${dataset.overlapping_classes}
+  num_processes: 6
+  previous_stage_results_path: null # set only for two-stage models
+  metric_list:
+    - dice
+    - generalized_dice
+    - surface_dice

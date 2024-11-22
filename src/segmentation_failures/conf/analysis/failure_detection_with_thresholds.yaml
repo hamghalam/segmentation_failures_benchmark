@@ -1,0 +1,17 @@
+defaults:
+  - fail_thresholds: fail_thresholds_general
+
+save_curves: true
+fd_metrics:
+  - aurc
+  - e-aurc
+  - norm-aurc
+  - opt-aurc
+  - rand-aurc
+  - failauc
+  - failap_suc
+  - failap_err
+  - fpr@95tpr
+ood_metrics:
+  - ood_auc
+id_domain: ${dataset.id_domain}

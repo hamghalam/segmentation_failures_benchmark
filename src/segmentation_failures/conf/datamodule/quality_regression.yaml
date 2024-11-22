@@ -1,0 +1,20 @@
+_target_: segmentation_failures.data.datamodules.quality_regression.QualityRegressionDataModule
+metric_targets:
+  - generalized_dice
+  - dice
+prediction_dir: ${paths.predictions_dir}
+dataset_id: ${dataset.dataset_id}
+fold: ???
+test_data_root: ${paths.data_root_dir}
+confid_name: null
+confid_dir: ${paths.pixel_confid_dir}
+batch_size: 2
+num_workers: null
+pin_memory: true
+domain_mapping: 0
+preproc_only: false
+cache_num: 1.0
+use_metatensor: true
+randomize_prediction: 0.33
+include_background: false
+expt_group: ${expt_group}

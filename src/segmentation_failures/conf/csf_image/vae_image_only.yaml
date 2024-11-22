@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - vae_image_and_mask
+
+csf_image:
+  hparams:
+    img_channels: ${dataset.img_channels}
+    seg_channels: 0

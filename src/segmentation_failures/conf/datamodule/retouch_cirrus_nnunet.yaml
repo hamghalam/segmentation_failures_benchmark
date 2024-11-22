@@ -1,0 +1,7 @@
+defaults:
+  - nnunet
+
+batch_size: 2
+# patch_size: [48, 160, 160]
+patch_size: [16, 384, 256]
+nnunet_config: 3d_fullres_custompatch

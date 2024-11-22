@@ -1,0 +1,5 @@
+batch_logging:
+  _target_: segmentation_failures.callbacks.batch_logging.BatchVisualization
+  num_classes: ${dataset.num_classes}
+  max_num_images: 8
+  every_n_steps: 250

@@ -1,0 +1,6 @@
+hparams:
+  _target_: segmentation_failures.models.segmentation.UNet_segmenter
+  num_classes: ${dataset.num_classes}
+  lr: 1e-3
+  weight_decay: 1e-5
+checkpoint: null

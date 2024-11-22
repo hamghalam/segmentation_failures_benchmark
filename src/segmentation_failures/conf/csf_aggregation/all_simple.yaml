@@ -1,0 +1,16 @@
+# TODO I don't know how to configure trainer=cpu here... Could do it in the experiments.__init__.py but here would be better.
+defaults:
+  - simple_aggs@hparams.aggregation_methods:
+      - mean
+      - only_non_boundary
+      - foreground
+      - patch_based
+      - pairwise_gen_dice
+      - pairwise_mean_dice
+
+hparams:
+  _target_: segmentation_failures.models.confidence_aggregation.SimpleAggModule
+  dataset_id: ${dataset.dataset_id}
+trainable: false
+checkpoint: null
+twostage: true # implement later

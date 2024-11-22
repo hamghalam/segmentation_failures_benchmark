@@ -1,0 +1,12 @@
+hparams:
+  _target_: segmentation_failures.networks.dynunet.get_network
+  spatial_dims: ${dataset.img_dim}
+  in_channels: ${dataset.img_channels}
+  out_channels: ${dataset.num_classes}
+  patch_size: ${datamodule.patch_size}
+  spacings: ${datamodule.spacing}
+  dropout: 0.0
+  num_dropout_units: 0
+  deep_supervision: False
+  blocks_per_stage: 1
+checkpoint: null

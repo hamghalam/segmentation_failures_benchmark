@@ -1,0 +1,27 @@
+# @package _global_
+
+csf_image:
+  hparams:
+    _target_: segmentation_failures.models.image_confidence.SingleGaussianOODDetector
+    feature_path: ???
+    sw_patch_size: ${datamodule.patch_size} # can be null, in which case no sliding window will be used
+    sw_batch_size: ${datamodule.batch_size}
+    sw_overlap: 0.5
+    sw_training: False
+    max_feature_size: 10000
+    store_precision: True
+    assume_centered: False
+  trainable: true
+  checkpoint: null
+  needs_pretrained_segmentation: true
+  twostage: false
+
+trainer:
+  max_epochs: 1
+  precision: 32
+  check_val_every_n_epoch: 1
+
+callbacks:
+  train:
+    model_checkpoint:
+      save_top_k: 0

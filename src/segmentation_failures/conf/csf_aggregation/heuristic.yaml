@@ -1,0 +1,23 @@
+# @package _global_
+defaults:
+  - override /trainer: cpu
+
+csf_aggregation:
+  hparams:
+    _target_: segmentation_failures.models.confidence_aggregation.HeuristicAggregationModule
+    regression_model: regression_forest
+    dataset_id: ${dataset.dataset_id}
+    confid_name: ???
+    target_metrics: null # inferred automatically
+  trainable: true
+  checkpoint: null
+  twostage: true
+
+trainer:
+  max_epochs: 1
+  check_val_every_n_epoch: 1
+
+callbacks:
+  train:
+    model_checkpoint:
+      save_top_k: 0

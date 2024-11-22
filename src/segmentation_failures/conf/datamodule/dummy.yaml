@@ -1,0 +1,12 @@
+# How to use this: just use the datamodule you want to simulate as default here and add the arguments indicated below
+
+defaults:
+  - kits23_nnunet
+
+# IMPORTANT: Add these arguments below; they determine the actual behavior of the dataloader
+hparams:
+  _target_: segmentation_failures.data.datamodules.dummy_modules.DummyNNunetDataModule
+  dummy_num_samples: 1
+  dummy_num_channels: 1
+  dummy_img_size: [625, 625, 625]
+  dummy_batch_size: 1

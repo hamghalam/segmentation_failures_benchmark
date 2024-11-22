@@ -1,0 +1,4 @@
+mean:
+  _target_: segmentation_failures.models.confidence_aggregation.get_aggregator
+  name: simple
+  agg_fn: mean

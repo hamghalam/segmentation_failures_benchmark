@@ -1,0 +1,29 @@
+# @package _global_
+
+csf_image:
+  hparams:
+    _target_: segmentation_failures.models.image_confidence.vae_estimator.SimpleVAEmodule
+    img_dim: ${dataset.img_dim}
+    img_channels: ${dataset.img_channels}
+    seg_channels: ${dataset.num_fg_classes}
+    img_size: null # currently set as a python constant in the datamodule
+    lr: 1e-4
+    z_dim: 256
+    model_h_size: [32, 64, 128, 256, 512]
+    liu_architecture: false
+    to_1x1: True
+    beta: 0.001
+    normalization_op: none
+    recon_loss_img: l1
+    recon_loss_seg: bce
+    log_n_samples: 0
+    log_train_recons: false
+    log_val_recons: true
+  trainable: true
+  needs_pretrained_segmentation: false
+  checkpoint: null
+  twostage: true
+
+trainer:
+  max_epochs: 1000
+  check_val_every_n_epoch: 1

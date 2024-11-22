@@ -1,0 +1,9 @@
+train:
+  prediction_saver:
+    _target_: segmentation_failures.callbacks.prediction_writer.PredictionWriterWithBalancing
+    output_dir: ${paths.predictions_dir}
+    num_fg_classes: ${dataset.num_fg_classes}
+    num_export_workers: 1
+    num_bins: 20
+    max_num_per_bin: 2
+    randomize_bins: true

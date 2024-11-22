@@ -1,0 +1,48 @@
+# @package _global_
+
+# specify here default training configuration
+defaults:
+  - _self_ # see https://hydra.cc/docs/tutorials/basic/your_first_app/defaults/#composition-order-of-primary-config
+  - hydra: local
+  - paths: default
+  - logger: default
+  - trainer: single_gpu
+  - callbacks: default
+  - analysis: failure_detection
+  - dataset: null
+  - datamodule: null
+  - backbone: null
+  - segmentation: null
+  - csf_pixel: null
+  - csf_image: null
+  - csf_aggregation: null
+  # debugging config (enable through command line, e.g. `python train.py debug=default)
+  - debug: null
+  # optional local config for machine/user specific settings
+  # it's optional since it doesn't need to exist and is excluded from version control
+  - optional local: default
+
+# I currently use loguru
+loguru:
+  level: INFO
+  file: main.log # relative to hydra:run.dir
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: 32586152
+
+test:
+  last_ckpt: true
+  # this applies only to the image CSF; for segmentation, we always use the last checkpoint
+
+resume_from_checkpoint:
+  path: null
+  load_expt_config: false
+
+# Sometimes this causes errors on my workstation. See this discussion:
+# https://github.com/pytorch/pytorch/issues/973#issuecomment-459398189
+# Unfortunately, I wasn't able to find the cause of the issue, so
+# the workaround is to set this to `file_system` instead.
+mp_sharing_strategy: file_descriptor
+
+expt_group: default
+expt_name: ???

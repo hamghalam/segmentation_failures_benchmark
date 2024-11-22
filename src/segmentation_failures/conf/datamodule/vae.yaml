@@ -1,0 +1,14 @@
+_target_: segmentation_failures.data.datamodules.vae.VAEdataModule
+dataset_id: ${dataset.dataset_id}
+fold: ???
+test_data_root: ${paths.data_root_dir}
+prediction_dir: ${paths.predictions_dir}
+batch_size: 6
+num_workers: null
+pin_memory: true
+fixed_steps_per_epoch: 250
+domain_mapping: 0
+preprocess_only: false
+cache_num: 1.0
+use_metatensor: true
+clip_values: 2.0

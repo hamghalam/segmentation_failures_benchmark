@@ -1,0 +1,9 @@
+dataset_id: 531
+img_dim: 2
+img_channels: 3
+num_classes: 2
+# TODO num_classes=2 is necessary because it's used to set the number of network outputs
+# This is not nice, is there another way? Need to check also the other uses of this variable...
+num_fg_classes: 2 # TODO This is a workaround. Some other configs need this value
+overlapping_classes: true
+id_domain: ID

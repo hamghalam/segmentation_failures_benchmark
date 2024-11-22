@@ -1,0 +1,15 @@
+_target_: segmentation_failures.data.datamodules.nnunet_module.NNunetDataModule
+dataset_id: ${dataset.dataset_id}
+fold: ???
+device: ${trainer.accelerator}
+test_data_root: ${paths.data_root_dir}
+batch_size: ???
+patch_size: ??? # ZYX
+spacing: null # obtained automatically from nnunet trainer
+nnunet_config: 3d_fullres
+nnunet_plans_id: nnUNetPlans
+deep_supervision: ${backbone.hparams.deep_supervision}
+num_workers: null # (training) automatically set by nnunet
+num_workers_preproc: 3
+domain_mapping: 0
+preproc_only: false

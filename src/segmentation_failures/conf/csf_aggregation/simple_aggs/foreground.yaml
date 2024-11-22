@@ -1,0 +1,4 @@
+foreground:
+  _target_: segmentation_failures.models.confidence_aggregation.get_aggregator
+  name: foreground_weighted
+  boundary_width: 4

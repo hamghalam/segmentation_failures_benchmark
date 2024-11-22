@@ -1,0 +1,5 @@
+confidence_saver:
+  _target_: segmentation_failures.callbacks.confidence_map_writer.PixelConfidenceWriter
+  output_dir: ${paths.pixel_confid_dir}
+  num_export_workers: 3
+  confid_name: null

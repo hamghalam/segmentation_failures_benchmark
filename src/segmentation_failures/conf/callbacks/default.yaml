@@ -1,0 +1,18 @@
+# Note if you want to adapt this from the command line:
+# - to add a callback use +checkpoint/train=quality_training_monitor
+# - to redefine the whole list use checkpoint/train='[quality_training_monitor,batch_logging]'
+defaults:
+  - train_seg:
+      - model_checkpoint
+      #   - batch_logging  # slow
+      - prediction_saver
+      # prediction saver only logs in case of trainer.validate call
+  - train:
+      - model_checkpoint
+      #   - batch_logging  # slow
+  - validate:
+      #   - batch_logging  # slow
+      - prediction_saver
+  - test:
+      - results_saver
+      - prediction_saver

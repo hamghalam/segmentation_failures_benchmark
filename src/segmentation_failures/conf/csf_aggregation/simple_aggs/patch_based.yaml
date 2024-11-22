@@ -1,0 +1,5 @@
+patch_min:
+  _target_: segmentation_failures.models.confidence_aggregation.get_aggregator
+  name: patch_min
+  patch_size: null # will result in [10]**D patch
+  mean: true

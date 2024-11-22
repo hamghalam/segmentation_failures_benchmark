@@ -1,0 +1,6 @@
+prediction_distr_saver:
+  _target_: segmentation_failures.callbacks.prediction_writer.MultiPredictionWriter
+  pred_key: prediction_distr
+  output_dir: ${paths.prediction_samples_dir}
+  save_probabilities: false
+  num_export_workers: 2

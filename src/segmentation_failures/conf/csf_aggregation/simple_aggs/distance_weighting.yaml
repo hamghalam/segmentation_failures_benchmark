@@ -1,0 +1,6 @@
+distance_weighted:
+  _target_: segmentation_failures.models.confidence_aggregation.get_aggregator
+  name: distance_weighted
+  agg_fn: mean
+  saturate: 4.0
+  spacing: ${datamodule.spacing}

@@ -1,0 +1,10 @@
+defaults:
+  - abstract
+
+dataset_id: "542"
+img_dim: 3
+img_channels: 1
+num_classes: 4
+num_fg_classes: 3 # TODO This is a workaround. Some other configs need this value
+overlapping_classes: false
+id_domain: ["Spectralis", "Cirrus"]

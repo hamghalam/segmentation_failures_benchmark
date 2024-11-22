@@ -1,0 +1,5 @@
+defaults:
+  - dynamic_resencunet
+
+hparams:
+  deep_supervision: True

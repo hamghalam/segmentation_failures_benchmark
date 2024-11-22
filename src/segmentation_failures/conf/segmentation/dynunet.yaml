@@ -1,0 +1,10 @@
+hparams:
+  _target_: segmentation_failures.models.segmentation.DynUnetModule
+  num_classes: ${dataset.num_classes}
+  patch_size: ${datamodule.patch_size}
+  batch_dice: false
+  sw_batch_size: ${datamodule.batch_size}
+  lr: 1e-2
+  weight_decay: 3e-5
+  overlapping_classes: ${dataset.overlapping_classes}
+checkpoint: null

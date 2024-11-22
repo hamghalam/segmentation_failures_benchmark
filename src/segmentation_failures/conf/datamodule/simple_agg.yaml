@@ -1,0 +1,11 @@
+_target_: segmentation_failures.data.datamodules.simple_agg.SimpleAggDataModule
+dataset_id: ${dataset.dataset_id}
+fold: null
+prediction_dir: ${paths.predictions_dir}
+prediction_samples_dir: ${paths.prediction_samples_dir}
+confid_dir: ${paths.pixel_confid_dir}
+confid_name: null
+num_workers: 3
+pin_memory: true
+metric_targets: null
+expt_group: ${expt_group}

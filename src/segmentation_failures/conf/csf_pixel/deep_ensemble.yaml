@@ -1,0 +1,11 @@
+hparams:
+  _target_: segmentation_failures.models.pixel_confidence.DeepEnsembleMultiConfidenceSegmenter
+  csf_names:
+    # - maxsoftmax
+    - predictive_entropy
+    - mutual_information
+  overlapping_classes: ${dataset.overlapping_classes}
+  everything_on_gpu: false
+  num_models: 5
+trainable: false
+checkpoint: null

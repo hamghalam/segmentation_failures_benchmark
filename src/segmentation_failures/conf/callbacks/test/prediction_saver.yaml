@@ -1,0 +1,5 @@
+prediction_saver:
+  _target_: segmentation_failures.callbacks.prediction_writer.PredictionWriter
+  output_dir: ${paths.predictions_dir}
+  save_probabilities: false
+  num_export_workers: 3

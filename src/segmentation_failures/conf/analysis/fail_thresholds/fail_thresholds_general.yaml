@@ -1,0 +1,6 @@
+# These are very arbitrary
+# I need to override these values for each dataset and maybe even specialize for different classes
+dice: 0.75
+hausdorff95: 30
+generalized_dice: 0.75
+surface_dice: 0.75

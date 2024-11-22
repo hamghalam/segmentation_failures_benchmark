@@ -1,0 +1,13 @@
+fail_thresholds: null
+save_curves: true
+fd_metrics:
+  - aurc
+  - e-aurc
+  - norm-aurc
+  - opt-aurc
+  - rand-aurc
+  - spearman
+  - pearson
+ood_metrics:
+  - ood_auc
+id_domain: ${dataset.id_domain}

@@ -1,0 +1,5 @@
+defaults:
+  - dynamic_unet
+
+hparams:
+  deep_supervision: True

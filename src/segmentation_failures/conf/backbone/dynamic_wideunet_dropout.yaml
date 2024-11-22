@@ -1,0 +1,7 @@
+defaults:
+  - dynamic_wideunet
+
+hparams:
+  dropout: 0.5
+  num_dropout_units: 5
+  append_dropout: True

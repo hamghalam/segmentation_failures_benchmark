@@ -1,0 +1,25 @@
+# @package _global_
+
+csf_image:
+  hparams:
+    _target_: segmentation_failures.models.image_confidence.regression_network.QualityRegressionNet
+    output_names: null # inferred automatically
+    img_channels: ${dataset.img_channels}
+    img_dim: ${dataset.img_dim}
+    num_classes: ${dataset.num_fg_classes}
+    confid_name: null
+    loss: l2 # used in Robinson et al
+    lr: 2e-4
+    weight_decay: 1e-4
+    cosine_annealing: true
+    voxel_spacing: null # set dynamically in training script
+    img_size: null # set dynamically in training script
+    blocks_per_stage: null # set dynamically in training script
+  trainable: true
+  checkpoint: null
+  needs_pretrained_segmentation: false
+  twostage: true
+
+trainer:
+  max_epochs: 1000
+  check_val_every_n_epoch: 5

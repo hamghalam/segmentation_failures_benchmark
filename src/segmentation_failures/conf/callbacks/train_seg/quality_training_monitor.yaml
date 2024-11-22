@@ -1,0 +1,4 @@
+quality_monitor:
+  _target_: segmentation_failures.callbacks.quality_estimator_monitor.TrainingTargetMonitor
+  output_dir: ${paths.extras_dir}
+  save_every_n_epochs: 10

@@ -1,0 +1,5 @@
+defaults:
+  - dynamic_unet
+
+hparams:
+  filter_scaling: 2
