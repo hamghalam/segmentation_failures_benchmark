@@ -9,7 +9,7 @@ seed=0
 for fold in {0..4}; do
     for seed in {0..4}; do
         # liver
-        python launcher.py --task train_seg --dataset liver --fold $fold --seed $seed --backbone dynamic_unet_dropout --group $group $maybe_cluster
+        python launcher.py --task train_seg --dataset liver --fold $fold --seed $seed --backbone dynamic_unet_dropout --group $group 
 
     done
 done
