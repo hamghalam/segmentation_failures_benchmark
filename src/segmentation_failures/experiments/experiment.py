@@ -299,6 +299,7 @@ def get_datamodule_config(expt: Experiment):
         "brats19_lhgg": "brats19_lhgg_nnunet",
         "covid_gonzalez": "covid_nnunet",
         "kits23": "kits23_nnunet",
+        "liver": "liver_nnunet",
         "mnms": "mnms_nnunet",
         "prostate_gonzalez": "prostate_nnunet",
         "simple_fets22_corrupted": "simple_fets22_corrupted",
