@@ -11,7 +11,7 @@ for fold in {0..4}; do
     for seed in {0..4}; do
         # liver
         python launcher.py --task train_seg --dataset liver --fold $fold --seed $seed --backbone dynamic_unet_dropout --group $group \
-               --overwrites trainer.check_val_every_n_epoch=5 trainer.max_epochs=2500
+               --overwrites trainer.check_val_every_n_epoch=5 trainer.max_epochs=20
         #python launcher.py --task train_seg --dataset $dataset --fold $fold --seed $seed --backbone dynamic_unet_dropout --group $group $maybe_cluster \
 #             --overwrites trainer.check_val_every_n_epoch=$check_every trainer.max_epochs=$epochs
     done
